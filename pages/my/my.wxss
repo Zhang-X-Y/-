@@ -1,0 +1,90 @@
+/* pages/my/my.wxss */
+/* 我的页面 */
+/* 头部 */
+.wll_header image{
+  width: 170rpx;
+  height: 170rpx;
+  display: block;
+  margin: 0 auto;
+}
+.box{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+}
+.box>view{
+  width: 20%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 100rpx;
+  border: 1px solid #eee;
+}
+.wll_header .wll_ul{
+  display: flex;
+  border-top: 1rpx solid #ccc;
+  padding: 20rpx 0rpx;
+  margin-top: 48rpx;
+}
+
+.wll_header .wll_ul .wll_li{
+  width: 33.33%;
+  font-size: 22rpx;
+  height: 70rpx;
+  border-right: 1rpx solid #ccc;
+  box-sizing: border-box;
+}
+
+.wll_header .wll_ul>.wll_li>text{
+  display: block;
+  text-align: center;
+}
+
+.wll_header .wll_button{
+  width: 230rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* border: 1px  solid #040404; */
+  background: none;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 200;
+  color:#040404;
+}
+
+.wll_content image{
+  width: 100%;
+  height: 240rpx;
+}
+
+.wll_content image{
+  width: 100%;
+  height: 240rpx;
+}
+
+.wll_dl{
+  display: flex;
+  height: 106rpx;
+  line-height: 106rpx;
+  padding: 0 30rpx;
+}
+.wll_dl text:nth-child(1){
+  width: 50%;
+  font-size:30rpx;
+  }
+.wll_dl text:nth-child(2){
+  width: 50%;
+  font-size:20rpx;
+  text-align: right;
+  color:#aaa;
+}
+
+/* .wll_dl .wll_ljbd{
+  width: 30rpx;
+  height: 20rpx;
+  border: 1px solid #1aad19;
+  background: #1aad19;
+} */

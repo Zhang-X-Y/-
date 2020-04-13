@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/dingdan1/dingdan1",
+    "pages/cart/cart",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/fenlei/fenlei",
+    
+    "pages/xiang/xiang",
+    "pages/login/login",
+    "pages/lian/lian",
+    "pages/dizhi/dizhi",
+    "pages/di/di",
+    "pages/dingdan/dingdan"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "主页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "pages/images/home-fill.png",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/home.png"
+      },
+      {
+        "selectedIconPath": "pages/images/all-fill.png",
+        "pagePath": "pages/fenlei/fenlei",
+        "text": "分类",
+        "iconPath": "pages/images/all.png"
+      },
+      {
+        "selectedIconPath": "pages/images/add-cart-fill.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "pages/images/add-cart.png"
+      },
+      {
+        "selectedIconPath": "pages/images/bussiness-man-fill.png",
+        "pagePath": "pages/my/my",
+        "text": "登录",
+        "iconPath": "pages/images/bussiness-man.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

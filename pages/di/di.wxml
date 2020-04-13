@@ -1,0 +1,29 @@
+
+<view class="shouHuo">
+    <!-- 内容 -->
+    <view class="shouHuo_con">
+      <view class="shouHuo_con_one" wx:for="{{list}}"
+       bindtap="black" id="{{item.id}}">
+        <view  class="shouHuo_con_two" >
+        <view class="aa">
+        <view class="bb">{{item.linkMan}}</view>
+        <text >{{item.mobile}}</text>
+        </view>
+         <view class="aa">
+        <view class="bb">{{item.address}}</view>
+        <text wx:if="{{item.isDefault}}">默认地址</text>
+        </view>
+        <view></view>
+      </view>
+       <image src="../images/ppp.png" bindtap="update" data-id="{{item.id}}"></image>
+      </view>
+    </view>
+    <!-- 底部固定 -->
+    <view class="shouHuo_con_three" bindtap="xinZengAddress">
+      <view>+</view>
+      <view>新增收货地址</view>
+      <image src="../images/rihgt.png"></image>
+    </view>
+<!-- 结束 -->
+</view>
+

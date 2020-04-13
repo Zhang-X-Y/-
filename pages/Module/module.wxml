@@ -1,0 +1,67 @@
+<template name="lian">
+ <view class="box_shop">
+  <view wx:for="{{list}}" class="shop_list" style="" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="margin-left:{{item.left}}" data-index="{{index}}">
+   <checkbox checked="{{item.active}}" bindtap="cc" data-index="{{index}}"></checkbox>
+    <image src="{{item.pic}}"></image>
+    <view class="shop_list_one">
+      <view class="shop_list_one_left">
+        <view class="shop_list_one_left_text">{{item.name}}</view>
+        <view class="shop_list_one_left_price">${{item.price}}</view>
+        <text wx:for="{{item.sku}}">
+          <text class="as">{{item.optionName}}:{{item.optionValueName}}</text>
+        </text>
+      </view>
+      <view class="shop_list_one_right">
+        <view>
+            <button class="btn btn_one" bindtap="jian"
+            data-num="{{item.number}}"
+            data-key="{{item.key}}"
+            data-index="{{index}}">-</button>
+            <view class="shop_list_one_right_num">{{item.number}}</view>
+            <button class="btn btn_one" bindtap="jia"
+            data-num="{{item.number}}"
+            data-key="{{item.key}}"
+             data-index="{{index}}">+</button>
+        </view>
+      </view>
+    </view>
+     <view class="del" bindtap="del" 
+          data-key="{{item.key}}">
+          删除
+      </view>
+  </view>
+  <view class="num">
+      <view>
+        合计:￥{{number}} + 0积分
+      </view>
+      <view bindtap="dingdan">
+        去结算
+      </view>
+  </view>
+  </view>
+</template>
+
+<template name="fail">
+    <view class="box_shop">
+<!--没有添加到购物车的时候，显示，有的话就隐藏，显示数据  -->
+  <view class="shop_shop">
+    <image src="../images/shop_one.png"></image>
+    <view>购物车空空如也~</view>
+    <button bindtap="index">去逛逛</button>
+  </view>
+  <view class="cha">
+<!-- 插入广告 -->
+  <image src="../images/111.png"></image>
+  </view>
+</view>
+
+</template>
+
+
+<template name="lianxi">
+  <view>
+    <view wx:for="{{list}}" wx:for-item="inx">
+      {{inx}}
+    </view>
+  </view>
+</template>

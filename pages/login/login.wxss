@@ -1,0 +1,9 @@
+/* pages/login/login.wxss */
+.box{
+  font-size: 12px;
+  padding-left: 20px;
+  line-height: 20px;
+}
+button{
+  padding: 10;
+}

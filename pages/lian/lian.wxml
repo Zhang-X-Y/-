@@ -1,0 +1,6 @@
+<!--pages/lian/lian.wxml-->
+ <!-- <text>pages/lian/lian.wxml</text>  -->
+<import src="../lianxi/lianxi"/>
+<template is="lianxi" data="{{list}}">
+
+</template>

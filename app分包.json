@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/fenlei/fenlei",
+    "pages/my/my",
+    "pages/login/login"
+  ],
+  "subpackages":[
+    {
+      "root":"pagesA",
+      "name":"pagesA",
+      "pages": [
+        "pages/xiang/xiang",
+        "pages/cart/cart"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "主页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "pages/images/home-fill.png",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/home.png"
+      },
+      {
+        "selectedIconPath": "pages/images/all-fill.png",
+        "pagePath": "pages/fenlei/fenlei",
+        "text": "分类",
+        "iconPath": "pages/images/all.png"
+      },
+      {
+        "selectedIconPath": "pages/images/bussiness-man-fill.png",
+        "pagePath": "pages/my/my",
+        "text": "登录",
+        "iconPath": "pages/images/bussiness-man.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

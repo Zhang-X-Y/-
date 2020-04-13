@@ -1,0 +1,173 @@
+<!--pages/xiang/xiang.wxml-->
+<!--pages/xiangQin/xiangQin.wxml-->
+<!-- 商品详情页面布局 -->
+<view class="xiangQin">
+  <!-- 头部布局 -->
+  <view class="xiangQin_head">
+    <image src="{{list.pic}}" class="xiangQin_head_image"></image>
+    <view class="xiangQin_head_one">
+      <view>{{list.name}}</view>
+      <view class="xiangQin_head_two">
+        <view>￥{{list.minPrice}}
+          <text>{{list.numberOrders}}人已买</text>
+        </view>
+        <view class="xiangQin_head_three">
+          <button open-type="share">
+            <image src="../images/z.png"></image>
+          </button>
+          <button bindtap="hai">
+            <image src="../images/zz.png"></image>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 选择 -->
+  <view class="xiangQin_xuan">
+    <view>选择：尺寸 颜色</view>
+    <!-- 选择 choice -->
+    <image src="../images/rihgt.png" bindtap="choice"></image>
+  </view>
+  <!-- 商品介绍 -->
+  <view class="xiangQin_jieShao">
+    <image src="../images/pin_one.jpg" wx:if="{{flg}}"></image>
+    <image src="../images/pin_two.jpg" wx:if="{{flg_one}}" style="height:1400px;"></image>
+    <image src="../images/pin_three.jpg" wx:if="{{flg_two}}"></image>
+    <image src="../images/pin_four.jpg" wx:if="{{flg_three}}"></image>
+    <image src="../images/pin_five.jpg" wx:if="{{flg_four}}"></image>
+  </view>
+  <!-- 底部固定导航 -->
+  <view class="zi_bottom" wx:if="{{!show}}" bindtap="show">
+    <image src="../images/ll.png"></image>
+    <view>快速导航</view>
+  </view>
+  <view class="zi_bottom_one" wx:if="{{show}}" bindtap="show">
+    <view class="zi_bottom_one_nav">
+      <image src="../images/rl.png"></image>
+      <text>快速导航</text>
+    </view>
+    <view class="zi_bottom_two">
+      <view class="zi_bottom_two_dd" bindtap="index">
+        <image src="../images/show.png"></image>
+        <text>首页</text>
+      </view>
+      <view class="zi_bottom_two_dd" bindtap="fen">
+        <image src="../images/fen_one.png"></image>
+        <text>分类</text>
+      </view>
+      <view class="zi_bottom_two_dd" bindtap="shop">
+        <image src="../images/shop_one.png"></image>
+        <text>购物车</text>
+      </view>
+      <view class="zi_bottom_two_dd" bindtap="my">
+        <image src="../images/my.png"></image>
+        <text>我的</text>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 底部固定导航 -->
+  <view class="xiangQin_fiex">
+    <view class="xiangQin_fiex_one">
+      <view class="xiangQin_fiex_two">
+        <image src="../images/ke.png"></image>
+        <view>客服</view>
+      </view>
+      <view class="xiangQin_fiex_two" bindtap="shop">
+        <image src="../images/shop_one.png"></image>
+        <view>购物车</view>
+      </view>
+    </view>
+    <view class="xiangQin_fiex_three" bindtap="choice">加入购物车</view>
+    <view class="xiangQin_fiex_four" bindtap="mai">立即购买</view>
+  </view>
+
+  <!-- 点击生成海报 -->
+  <!-- 结束 -->
+  <!-- <image src="../images/ll.png"></image> -->
+  <view class="conc" wx:if="{{done}}">
+    <view>
+      <view class="xiang">
+        <image src="{{list.pic}}"></image>
+        <view>
+          <view>{{list.name}}</view>
+          <view>￥{{price}}</view>
+        </view>
+        <icon type="cancel" class="xinagQing" bindtap="hidd"></icon>
+      </view>
+      <view class="size">
+        <view>
+          <view>{{arr.name}}</view>
+          <view class="size1">
+            <view wx:for="{{arr.childsCurGoods}}" bindtap="fen" data-s="{{item.id}}" style="border:{{item.id==size?'1px solid red':'1px solid #000'}}">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+        <view>
+          <view>{{arr1.name}}</view>
+          <view class="size1">
+            <view wx:for="{{arr1.childsCurGoods}}" bindtap="fen1" data-s="{{item.id}}" style="border:{{item.id==size1?'1px solid red':'1px solid #000'}}">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="add">
+        <view> 购买数量 </view>
+        <view>
+          <button size="mini" bindtap="jian">-</button>
+          <input size="mini" value="{{num}}"></input>
+          <button size="mini" bindtap="jia">+</button>
+        </view>
+      </view>
+      <view class="jia" bindtap="add">
+        加入购物车
+      </view>
+    </view>
+  </view>
+  
+
+  <view class="conc" wx:if="{{done1}}">
+    <view>
+      <view class="xiang">
+        <image src="{{list.pic}}"></image>
+        <view>
+          <view>{{list.name}}</view>
+          <view>￥{{price}}</view>
+        </view>
+        <icon type="cancel" class="xinagQing" bindtap="hidd"></icon>
+      </view>
+      <view class="size">
+        <view>
+          <view>{{arr.name}}</view>
+          <view class="size1">
+            <view wx:for="{{arr.childsCurGoods}}" bindtap="fen" data-s="{{item.id}}" style="border:{{item.id==size?'1px solid red':'1px solid #000'}}">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+        <view>
+          <view>{{arr1.name}}</view>
+          <view class="size1">
+            <view wx:for="{{arr1.childsCurGoods}}" bindtap="fen1" data-s="{{item.id}}" style="border:{{item.id==size1?'1px solid red':'1px solid #000'}}">
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="add">
+        <view> 购买数量 </view>
+        <view>
+          <button size="mini" bindtap="jian">-</button>
+          <input size="mini" value="{{num}}"></input>
+          <button size="mini" bindtap="jia">+</button>
+        </view>
+      </view>
+      <view class="jia" bindtap="goumai">
+        立即购买
+      </view>
+    </view>
+  </view>
+</view>

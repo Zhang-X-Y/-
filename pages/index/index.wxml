@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="content">
+  <!-- <view class="banner"><image src="{{img[0].img}}"></image> -->
+  <input placeholder="输入搜索关键词" style="" class="inp1" bindconfirm="search" value="{{str}}" bindinput="getSearchInput" />
+  <!-- <icon class="ii"></icon> -->
+  <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <swiper-item wx:for="{{bnrUrl}}" wx:for-index="index">
+      <image src='{{item.picUrl}}' class='u-img-slide' mode='aspectFill'></image>
+    </swiper-item>
+  </swiper>
+  <!-- </view> -->
+
+  <view class="text">
+    <view>
+      <image src="../images/01.png"></image>
+      <view>
+        <swiper style="width:508rpx;height:34rpx" autoplay="true" interval="3000" duration="1000" vertical="true" circular="true">
+          <swiper-item wx:for="{{arr.dataList}}">{{item.title}}</swiper-item>
+        </swiper>
+      </view>
+    </view>
+    <view> 更多> </view>
+  </view>
+  
+  <scroll-view scroll-x="true" class="scro">  
+      <view wx:for="{{array}}" class="tab-text" bindtap="fen" data-s="{{item.id}}" class="scro-item" style="color:{{item.id==id?'red':'#000'}}">
+      <!-- <image src="{{item.icon}}"></image> -->
+      <view>{{item.name}}</view>
+      </view>
+    </scroll-view>
+
+  <view class="tab">
+    <!-- <view wx:for="{{array}}" class="tab-text" bindtap="fen" data-s="{{item.id}}">
+      <image src="{{item.icon}}"></image>
+      <view>{{item.name}}</view>
+    </view> -->
+    <view class="tab-val">
+      ———— 爆品推荐 ————
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="bottom_li" wx:for="{{list}}" wx:key="index">
+     <navigator url="../xiang/xiang?id={{item.id}}" open-type="navigate">
+      <image src="{{item.pic}}"></image>
+      <view class="bottom_view">{{item.name}}</view>
+      <view class="bottom_view_one">${{item.minPrice}}
+        <text>${{item.originalPrice}}</text>
+      </view>
+        </navigator>  
+    </view>
+  </view>
+  <view style="color:#909090;font-size:14px;text-align:center">{{jiazai}}。。</view>
+</view>

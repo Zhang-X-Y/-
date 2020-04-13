@@ -1,0 +1,84 @@
+/* pages/dingdan1/dingdan1.wxss */
+.box{
+  background: #eee;
+}
+.head{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  font-size: 12px;
+  color: #999;
+  background: #fff;
+}
+.head>view{
+  width: 20%;
+  text-align: center;
+  line-height: 100rpx;
+}
+.head>view.active{
+  border-bottom: 1px solid red;
+}
+.dingDan_list{
+  background: #fff;
+  padding: 0 20px;
+  height: auto;
+  margin: 10px;
+}
+.dingDan_list_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+}
+.dingDan_list_top>view:nth-child(2){
+  display: flex;
+  align-content: center;
+}
+.dingDan_list_top>view:nth-child(2)>image{
+  width: 20px;
+  height: 20px;
+}
+.dingDan_list_middle{
+  height: 90px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.dingDan_list_middle>view:first-child{
+  flex: 1;
+}
+.dingDan_list_middle>view:first-child>image{
+ width: 40px;
+ height: 40px;
+ margin: 10px 0;
+}
+.dingDan_list_middle_two{
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content:flex-end;
+}
+.dingDan_list_middle_two>view>text{
+  color: red;
+}
+.dingDan_list_bottom>view:first-child{
+  margin: 10px 0;
+  font-size: 10px;
+}
+.dingDan_list_bottom_two{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.dingDan_list_bottom_two>view{
+  width: auto;
+  padding:4px  10px;
+  border: 1px solid #000;
+  margin-left: 10px;
+}
+.dingDan_list_bottom_two>view:first-child{
+  color: red;
+  border: 1px solid red;
+}

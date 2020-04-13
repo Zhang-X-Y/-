@@ -1,0 +1,31 @@
+<!--pages/serch/serch.wxml-->
+<!--pages/search/search.wxml-->
+<view class="search">
+
+  <view class="goSearch">
+    <input placeholder="输入搜索关键词" value="{{name}}" bindconfirm='goSearch' confirm-type="search">
+    <image src="../images/search.png"></image>
+    </input>
+  </view>
+  <view class="nav">
+    <text class="{{flag1?'textActive':''}}" bindtap="find1">综合</text>
+    <text class="{{flag2?'textActive':''}}" bindtap="find2">新品</text>
+    <text class="{{flag3?'textActive':''}}" bindtap="find3">销量</text>
+    <text class="{{flag4?'textActive':''}}" bindtap="find4">价格</text>
+  </view>
+  <view class="goods">
+    <view wx:for-items="{{list}}">
+      <view class="goodsTop">
+        <image src="{{item.pic}}"></image>
+      </view>
+      <view class="goodsBot">
+        <text>{{item.name}}</text>
+        <text>￥{{item.minPrice}}</text>
+        <view>
+          <text>{{item.numberSells}}人已购买</text>
+          <image src="../images/cart_icon.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

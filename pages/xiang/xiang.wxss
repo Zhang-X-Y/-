@@ -1,0 +1,333 @@
+/* pages/xiangQin/xiangQin.wxss */
+/* 商品详情页布局 */
+.jia{
+  width: 100%;
+  height:100rpx;
+  background: red;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 100rpx;
+}
+.add{
+  padding: 37rpx 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add>view:nth-of-type(2){
+  display: flex;
+}
+.add>view:nth-of-type(2)>input{
+  width: 50rpx;
+  height: 70rpx;
+  border: 1px solid #eee;
+  padding-left: 30rpx;
+}
+.size1>.active{
+   border: 1px solid red;
+}
+.size{
+  padding: 0 10px;
+  width: 100%;
+  height:300rpx;
+  border-bottom:1px solid #eee;
+}
+.size>view{
+  font-size: 14px;
+  color: #000300;
+  height: 50%;
+}
+.size>view>view:nth-of-type(1){
+  line-height:24px;
+}
+.size .size1{
+  display: flex;
+  flex-wrap: wrap;
+}
+.size1>view{
+  padding:7rpx 24rpx;
+  border: 1px solid #999;
+  margin-left: 20rpx;
+}
+.conc{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5)
+}
+.conc>view{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 700rpx;
+}
+.xiang{
+  width: 100%;
+  height: 150rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.xiang>view{
+  width:50%;
+  font-size: 12px;
+  line-height:60rpx;
+}
+.xiang>view>view:nth-of-type(2){
+  color:red;
+}
+.xiang>image{
+  width: 140rpx;
+  height: 140rpx;
+}
+.xiangQin{
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  position: relative;
+}
+page{
+  height: 100%;
+}
+/* 头部 */
+.xiangQin_head{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding:0 0 10px 0;
+}
+.xiangQin_head_image{
+  width: 100%;
+  height: 200px;
+}
+.xiangQin_head_one{
+  height: auto;
+  padding: 0 10px;
+}
+.xiangQin_head_one>view:nth-child(1){
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.xiangQin_head_two{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.xiangQin_head_two>view:nth-child(1){
+  color: red;
+  font-size: 14px;
+}
+.xiangQin_head_two>view:nth-child(1)>text{
+  font-size: 10px;
+  color: #eee;
+  margin-left: 20px;
+}
+.xiangQin_head_three{
+  width: 80px;
+  height: 20px;
+  display: flex;
+}
+.xiangQin_head_three>button{
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  width: 40px;
+  min-height: 20px;
+}
+.xiangQin_head_three>button>image{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+.xiangQin_xuan{
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin-top: 20px;
+  margin-bottom:10px;
+}
+.xiangQin_xuan>image{
+  width: 20px;
+  height: 20px;
+}
+/* 商品介绍 */
+.xiangQin_jieShao>image:nth-child(1){
+  width: 100%;
+  height: 12000px;
+}
+/* 固定导航 */
+.zi_bottom{
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  width: 60px;
+  height: 40px;
+  border-radius: 6px 0 0 6px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.zi_bottom>image{
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.zi_bottom>view{
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+}
+/* 出来的那个导航 */
+.zi_bottom_one{
+  position:fixed;
+  bottom: 80px;
+  right: 0;
+  width: 80%;
+  height: 40px;
+  /* border: 1px solid #000; */
+  display: flex;
+}
+.zi_bottom_one_nav{
+  width: 60px;
+  height: 40px;
+  border-radius: 6px 0 0 6px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.zi_bottom_one_nav>image{
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.zi_bottom_one_nav>text{
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+.zi_bottom_two{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.zi_bottom_two_dd{
+  width: 25%;
+  text-align: center;
+}
+.zi_bottom_two_dd>image{
+  width: 20px;
+  height: 20px;
+}
+.zi_bottom_two_dd>text{
+  display: block;
+  font-size: 12px;
+}
+/* 底部固定导航 */
+.xiangQin_fiex{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #000; */
+  background: #fff;
+}
+.xiangQin_fiex_one{
+  width: 40%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid #000; */
+}
+.xiangQin_fiex_two{
+  height: 40px;
+  width: 50%;
+  text-align: center;
+  font-size: 10px;
+}
+.xiangQin_fiex_two>image{
+  width: 15px;
+  height: 15px;
+  margin-top: 10px;
+}
+.xiangQin_fiex_three,.xiangQin_fiex_four{
+  width: 30%;
+  height: 40px;
+  background: orange;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+.xiangQin_fiex_four{
+  background: red;
+}
+/* 点击生成海报，保存 */
+.xiangQin_haiBao{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+}
+.xiangQin_haiBao_one{
+  width: 60%;
+  height: auto;
+  background: #fff;
+  padding: 20px 20px;
+  margin: 20px auto;
+  text-align: center;
+}
+.xiangQin_haiBao_one>image:nth-child(1){
+  width: 100%;
+  height: 100px;
+}
+.xiangQin_haiBao_two{
+  color: red;
+  margin: 6px 0;
+}
+.xiangQin_haiBao_three{
+  width: 100px;
+  height: 100px;
+}
+.xiangQin_haiBao_four{
+  margin: 6px 0;
+  font-size: 8px;
+  color: #eee;
+}
+.xiangQin_haiBao_five{
+  position: absolute;
+  bottom: 100px;
+  left: auto;
+  right: auto;
+}
+.xiangQin_haiBao_five>button{
+  width: 80px;
+  height: 40px;
+  background: greenyellow;
+  color: #fff;
+}/* pages/xiang/xiang.wxss */

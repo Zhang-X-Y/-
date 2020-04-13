@@ -1,0 +1,167 @@
+/* pages/start/start.wxss */
+
+.wll_start {
+  width: 100%;
+  height: 100%;
+}
+
+.wll_top {
+  width: 100%;
+  height: 460rpx;
+  background: #6dc0a9;
+  position: relative;
+}
+
+.wll_img1 {
+  width: 100%;
+  height: 200rpx;
+  padding-top: 60rpx;
+}
+.wll_img2 {
+  position: fixed;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: block;
+  margin-top: 50rpx;
+  animation: myfirst 1s infinite;
+  -moz-animation: myfirst 3s infinite; 
+  /* -webkit-animation: myfirst 5s infinite; Safari 和 Chrome */
+  /* -o-animation: myfirst 5s infinite; */
+}
+
+@keyframes myfirst {
+  0% {
+    left: 140px;
+    top: 120px;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    left: 160px;
+    top: 100px;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    left: 140px;
+    top: 90px;
+    transform: rotate(0deg);
+  }
+
+  75% {
+    left: 120px;
+    top: 100px;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    left: 140px;
+    top: 120px;
+    transform: rotate(25deg);
+  }
+}
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 70px;
+    bottom: -1px;
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 70px;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 40px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 40px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 40px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.wll_bottom {
+  width: 100%;
+  height: 720rpx;
+  background: #efeef1;
+}
+
+.wll_bottom image {
+  width: 100%;
+  height: 180rpx;
+  margin-top: 40rpx;
+}
+
+.wll_bottom .wll_button {
+  padding: 0;
+  width: 360rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  margin: 30px auto;
+  color: #fff;
+  background: #78c2ac;
+  border-radius: 30px;
+}
+

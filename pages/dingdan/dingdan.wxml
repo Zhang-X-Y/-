@@ -1,0 +1,77 @@
+<!--pages/dingdan/dingdan.wxml-->
+<!-- <text>pages/dingdan/dingdan.wxml</text> -->
+<!--pages/queRenDingDan/queRenDingDan.wxml-->
+<!-- 确认订单页面-->
+<view class="queRenDingDan">
+  <view>商品列表</view>
+    <view wx:for="{{list}}" class="queRenDingDan_head">
+      <image src="{{item.pic}}"></image>
+      <view class="queRenDingDan_head_right">
+       <view class="queRenDingDan_head_right_one">
+         <text>{{item.name}}</text>
+        <text>￥{{item.price}}</text>
+       </view>
+        <view class="queRenDingDan_head_right_two">
+          <view wx:for="{{item.sku}}" wx:for-item="val" style="float:left">
+            {{val.optionName}}:{{val.optionValueName}}
+          </view>
+          
+          <view style="float:right">
+            X {{item.number}}
+          </view>
+          <!-- <text>X{{shu}}</text> -->
+        </view>
+      </view>
+    </view>
+    <!-- 配送方式 -->
+    <view class="queRenDingDan_peiSong">
+
+      <view class="queRenDingDan_peiSong_one">
+        <view>配送方式</view>
+        <!-- 方式 -->
+        <view>
+               <!-- <radio-group bindchange="radioChange">
+                <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" size="14">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group> -->
+        </view>
+      </view>
+      <!-- 地址 -->
+      <view class="queRenDingDan_peiSong_two"
+      bindtap="add" wx:if="{{!address_show}}">
+        <view>+</view>
+        <view>新增收货地址</view>
+        <image src="../images/rihgt.png"></image>
+      </view>
+      <!-- 添加地址后的样式 -->
+      <view wx:if="{{address_show}}" class="add_address" bindtap="shouHuo">
+        <!-- <image src="../images/city.png"></image> -->
+        <view class="add_address_one">
+          <view>{{list_address.linkMan}} <text>{{list_address.mobile}}</text></view>
+          <view>{{list_address.address}}</view>
+        </view>
+        <image src="../images/rihgt.png"></image>
+      </view>
+      <!-- 备注 -->
+      <view  class="queRenDingDan_peiSong_three">
+        <view>备注</view>
+        <input type="text" placeholder="如需备注请输入"></input>
+      </view>
+    </view>
+    <!-- 优惠券 -->
+    <view  class="queRenDingDan_peiSong_four">
+      <view>选择使用优惠券</view>
+      <view>不使用优惠券</view>
+    </view>
+    <!-- 优惠 -->
+    <view class="queRenDingDan_peiSong_five">
+      <view>优惠券</view>
+      <view>-￥1</view>
+    </view>
+    <!-- 提交订单 -->
+    <view class="queRenDingDan_peiSong_fiex">
+      <view>合计：￥{{number}}+0积分</view>
+      <view bindtap="app">提交订单</view>
+    </view>
+</view>

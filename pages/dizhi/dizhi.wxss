@@ -1,0 +1,59 @@
+/* pages/dizhi/dizhi.wxss *//* pages/xinZengAddress/xinZengAddress.wxss */
+/* 新增地址页面布局 */
+.address{
+  width: 100%;
+  height: 96%;
+  position: relative;
+  background: #eee;
+  padding: 10px 0;
+}
+page{
+  height: 100%;
+}
+/* 微信地址 */
+.address_wx,.address_bao{
+  width: 90%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: greenyellow;
+  color: #fff;
+  margin: 10px auto;
+}
+/* 地址 */
+.address_con{
+  padding: 0 10px;
+  height: auto;
+  background: #fff;
+}
+.address_con_one{
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+.address_con_one>view{
+  width: 30%;
+}
+.address_con_one>input{
+  font-size: 14px;
+  height: 40px;
+  padding-left:20px; 
+  width: 94%;
+   overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
+}
+/* 保存 */
+.address_bao{
+  background: red;
+}
+.active{
+  background: green;
+}
+.active_one{
+  background: orange;
+}

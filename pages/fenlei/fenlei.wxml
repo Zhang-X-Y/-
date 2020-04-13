@@ -1,0 +1,28 @@
+<!--pages/fenlei/fenlei.wxml-->
+<view>
+  <input placeholder="输入搜索关键词" class="inp1"></input>
+  <view class="fen-box">
+    <view class="fen-con1">
+      <view class="z-l">
+        <view wx:for="{{list}}" bindtap="fen" data-s="{{item.id}}" style="color:{{item.id==id?'red':'#000'}}">
+          {{item.name}}
+        </view>
+      </view>
+    </view>
+    <view class="fen-con2">
+      <view class="z-r">
+        <view wx:for="{{array}}" bindtap="add" data-id="{{item.id}}">
+          <image src="{{item.pic}}"></image>
+          <view class="z-box">
+            <view>{{item.name}}</view>
+            <view>￥{{item.originalPrice}}</view>
+            <view>
+              <view>已售{{item.numberSells}}件</view>
+              <view>评分{{item.numberGoodReputation}}分</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
